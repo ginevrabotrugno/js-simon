@@ -14,24 +14,28 @@ container.append(numbers);
 setTimeout(function(){
     // Dopo 30 secondi i numeri scompaiono
     container.classList.add("hidden");
-}, 3000);
+}, 30000);
+
+const inputArr = [];
 
 setTimeout(function () {
     // // e l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-
-    const inputArr = [];
 
     for (let i = 0; i < 5; i++) {
         
         const inputNum = parseInt(prompt("inserisci qui il numero"));
         inputArr.push(inputNum);
+
+        if (numbers.includes(inputNum)) {
+            console.log("hai ricordato il numero", inputNum);
+        }
         
     }
 
-    console.log(inputArr);
-
-}, 4000)
+}, 30500)
 
 
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
+
+
 
