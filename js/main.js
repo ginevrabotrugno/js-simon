@@ -14,9 +14,11 @@ container.append(numbers);
 setTimeout(function(){
     // Dopo 30 secondi i numeri scompaiono
     container.classList.add("hidden");
+}, 3000);
 
+setTimeout(function () {
     // // e l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-    
+
     const inputArr = [];
 
     for (let i = 0; i < 5; i++) {
@@ -28,7 +30,7 @@ setTimeout(function(){
 
     console.log(inputArr);
 
-}, 3000);
+}, 4000)
 
 
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
