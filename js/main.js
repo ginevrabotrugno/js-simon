@@ -13,8 +13,21 @@ container.append(numbers);
 // Da lì parte un timer di 30 secondi.
 setTimeout(function(){
     // Dopo 30 secondi i numeri scompaiono
-    container.remove(numbers);
+    container.classList.add("hidden");
+
+    // // e l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+    
+    const inputArr = [];
+
+    for (let i = 0; i < 5; i++) {
         
+        const inputNum = parseInt(prompt("inserisci qui il numero"));
+        inputArr.push(inputNum);
+        
+    }
+
+    console.log(inputArr);
+
 }, 3000);
 
 
